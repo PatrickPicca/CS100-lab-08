@@ -81,7 +81,7 @@ class VisitorLatex : public Visitor
                 		iter->next();
         		}
 			text += "$";
-			text += "\n";
+			//text += "\n";
 			std::string temp = text;
 			text = "";
 	
