@@ -80,8 +80,10 @@ void accept(Visitor* visitor, int index){
         if (index == 1) visitor->visit_add_middle((this));
         if (index == 2) visitor->visit_add_end(this);
     }
-};
+
 
 ~Add() {}
+	
+	};
 #endif
 
