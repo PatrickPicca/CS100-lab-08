@@ -85,5 +85,6 @@ void accept(Visitor* visitor, int index){
         if (index == 2) visitor->visit_div_end(this);
     }
 
+	~Div() {}
 };
 #endif
