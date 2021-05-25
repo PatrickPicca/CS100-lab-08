@@ -10,7 +10,7 @@ TEST(PowTest, numChildren_BlankConstructor){
 	Base *test = nullptr, *x = nullptr, *y = nullptr;
   
 	test = new Pow();
-	EXPECT_EQ(test->number_of_children(), 0);
+	EXPECT_EQ(test->number_of_children(), 2);
 
 	delete test, x, y;
 }
@@ -56,8 +56,8 @@ TEST(PowTest, getChild_twoChildren_accessingChildren){
 	x = new Op(4);
 	y = new Op(8);
 	test = new Pow(x, y);
-	EXPECT_EQ(test->get_child(0)->stringify(), "4"); 
-	EXPECT_EQ(test->get_child(1)->stringify(), "8"); 
+	EXPECT_EQ(test->get_child(0)->stringify(), "4.00"); 
+	EXPECT_EQ(test->get_child(1)->stringify(), "8.00"); 
 
 	delete test, x, y;
 }
