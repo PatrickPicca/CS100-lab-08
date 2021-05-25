@@ -6,7 +6,7 @@
 #include "op.hpp"
 #include "div.hpp"
 
-TEST(PowTest, numChildren_BlankConstructor){
+TEST(DivTest, numChildren_BlankConstructor){
 	Base *test = nullptr, *x = nullptr, *y = nullptr;
   
 	test = new Div();
@@ -15,7 +15,7 @@ TEST(PowTest, numChildren_BlankConstructor){
 	delete test, x, y;
 }
 
-TEST(PowTest, numChildren_typicalConstructor){
+TEST(DivTest, numChildren_typicalConstructor){
 	Base *test = nullptr, *x = nullptr, *y = nullptr;
 	
 	x = new Op(4); 
@@ -26,7 +26,7 @@ TEST(PowTest, numChildren_typicalConstructor){
 	delete test, x, y;
 }
 
-TEST(PowTest, getChild_noChildren){
+TEST(DivTest, getChild_noChildren){
 	Base *test = nullptr, *x = nullptr, *y = nullptr;
 	
 	test = new Div();
@@ -35,7 +35,7 @@ TEST(PowTest, getChild_noChildren){
 	delete test, x, y;
 }
 
-TEST(PowTest, getChild_twoChildren){
+TEST(DivTest, getChild_twoChildren){
 	Base *test = nullptr, *x = nullptr, *y = nullptr;
 	
 	x = new Op(4);
@@ -50,7 +50,7 @@ TEST(PowTest, getChild_twoChildren){
 	delete test, x, y;
 }
 
-TEST(PowTest, getChild_twoChildren_accessingChildren){
+TEST(DivTest, getChild_twoChildren_accessingChildren){
 	Base *test = nullptr, *x = nullptr, *y = nullptr;
 	
 	x = new Op(4);

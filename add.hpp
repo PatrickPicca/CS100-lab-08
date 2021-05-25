@@ -63,10 +63,10 @@ virtual int number_of_children() {
     }
 virtual Base* get_child(int i) {
         if (i == 0){
-		 return left;
+		 return Base1;
 	}
         if (i == 1){
-		 return right;
+		 return Base2;
 	}
        else {
 		 return nullptr;

@@ -20,6 +20,12 @@ class Op : public Base {
 		ss << setprecision(3)<< showpoint << number;
 		return ss.str(); 
 	}
+	virtual int number_of_children(){
+		return 0;
+	}
+        virtual Base* get_child(int i){
+		return nullptr;
+	}
 };
 
 #endif //__OP_HPP__
