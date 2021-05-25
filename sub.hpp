@@ -73,5 +73,7 @@ void accept(Visitor* visitor, int index){
         if (index == 1) visitor->visit_sub_middle((this));
         if (index == 2) visitor->visit_sub_end(this);
     }
+	
+	~Sub(){}
 };
 #endif
