@@ -73,6 +73,8 @@ void accept(Visitor* visitor, int index){
         if (index == 1) visitor->visit_pow_middle((this));
         if (index == 2) visitor->visit_pow_end(this);
     }
+	
+	~Pow(){}
 };
 
 #endif
