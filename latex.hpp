@@ -6,7 +6,7 @@
 #include "iterator.cpp"
 #include <sstream>
 
-class Latex : public Visitor
+class VisitorLatex : public Visitor
 {
 	public:
 		virtual ~Latex(){}
