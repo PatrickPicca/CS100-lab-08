@@ -26,6 +26,7 @@ class Op : public Base {
         virtual Base* get_child(int i){
 		return nullptr;
 	}
+
 };
 
 #endif //__OP_HPP__
