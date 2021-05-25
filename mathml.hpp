@@ -7,7 +7,7 @@
 #include <sstream>
 
 
-class Mathml : public Visitor
+class VisitMathML : public Visitor
 {
 	public:
 		virtual ~Mathml(){}
