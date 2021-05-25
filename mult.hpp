@@ -64,7 +64,7 @@ virtual Base* get_child(int i) {
         if (i == 1){ 
                  return Base2;
         }
-       else { 
+        else { 
                  return nullptr;
         }
     }

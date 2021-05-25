@@ -52,6 +52,21 @@ class Pow : public Base {
 	}
 	return answer;
     }
+
+	virtual int number_of_children() {
+        	return 2;
+    	}
+	virtual Base* get_child(int i) {
+        	if (i == 0){ 
+                 	return Base1;
+        	}
+        	if (i == 1){ 
+                 	return Base2;
+        	}
+       		else { 
+                	return nullptr;
+        	}
+    	}
 };
 
 #endif
