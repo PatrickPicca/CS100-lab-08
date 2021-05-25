@@ -150,7 +150,7 @@ class Mathml : public Visitor
 			text += "</math>\n";
 			std::string temp = text;
 			text = "";
-			delete oter;
+			delete iter;
         		return temp;
 		}
 
