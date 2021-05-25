@@ -9,21 +9,21 @@
 class VisitorLatex : public Visitor
 {
 	public:
-		virtual ~Latex(){}
+		//virtual ~Latex(){}
 		std::string text = "";
 
 		virtual void visit_op(Op* node){
 			text += "{";
 			std::ostringstream stream;
-			stream << std::noshowpoint << node->value;
+			stream << std::noshowpoint << node->evaluate();
 			text += stream.str();
 				
 			text += "}";
 		}
-		virtual void visit_rand(Rand* node){
+		virtual void visit_rand(Op* node){
 			text += "{";
 			std::ostringstream stream;
-			stream << std::noshowpoint << node->value;
+			stream << std::noshowpoint << node->evaluate();
 			text += stream.str();
 			text += "}";
 		}
@@ -63,13 +63,13 @@ class VisitorLatex : public Visitor
         	virtual void visit_div_end(Div* node){
 			text += ")}";
 		}
-        	virtual void visit_pow_begin(Power* node){
+        	virtual void visit_pow_begin(Pow* node){
 			text += "{(";
 		}
-        	virtual void visit_pow_middle(Power* node){
+        	virtual void visit_pow_middle(Pow* node){
 			text += "^";
 		}
-        	virtual void visit_pow_end(Power* node){
+        	virtual void visit_pow_end(Pow* node){
 			text += ")}";
 		}
 		std::string PrintLaTeX(Base* ptr){

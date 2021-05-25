@@ -15,7 +15,7 @@ class Visitor{
 
         // Nodes with no children are visited only once (index = 0)
         virtual void visit_op(Op* node) = 0;
-        virtual void visit_rand(Rand* node) = 0;
+        virtual void visit_rand(Op* node) = 0;
 
         // Nodes with two children are visited three times.
         // index = 0 -> begin
