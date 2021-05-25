@@ -52,5 +52,21 @@ class Mult : public Base {
 	}
 	return answer;
     }
+
+
+virtual int number_of_children() {
+        return 2;
+    }
+virtual Base* get_child(int i) {
+        if (i == 0){ 
+                 return left;
+        }
+        if (i == 1){ 
+                 return right;
+        }
+       else { 
+                 return nullptr;
+        }
+    }
 };
 #endif

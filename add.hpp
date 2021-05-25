@@ -54,6 +54,28 @@ class Add : public Base {
 	return answer;
     }
 
+
+
+//To support simple iteration of nodes, two virtual methods number_of_children() and get_child(int i)
+
+virtual int number_of_children() {
+        return 2;
+    }
+virtual Base* get_child(int i) {
+        if (i == 0){
+		 return left;
+	}
+        if (i == 1){
+		 return right;
+	}
+       else {
+		 return nullptr;
+	}
+    }
+
 };
+
+
+
 #endif
 
