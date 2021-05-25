@@ -73,5 +73,6 @@ void accept(Visitor* visitor, int index){
         if (index == 2) visitor->visit_mult_end(this);
     }
 
+	~Mult(){}
 };
 #endif
