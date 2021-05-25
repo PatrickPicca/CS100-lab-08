@@ -80,9 +80,9 @@ virtual Base* get_child(int i) {
     }
 
 void accept(Visitor* visitor, int index){
-        if (index == 0) visitor->visit_add_begin(this);
-        if (index == 1) visitor->visit_add_middle((this));
-        if (index == 2) visitor->visit_add_end(this);
+        if (index == 0) visitor->visit_div_begin(this);
+        if (index == 1) visitor->visit_div_middle((this));
+        if (index == 2) visitor->visit_div_end(this);
     }
 
 };
