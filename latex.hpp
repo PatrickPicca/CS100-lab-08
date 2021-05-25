@@ -55,13 +55,13 @@ class VisitorLatex : public Visitor
 			text += ")}";
 		}
         	virtual void visit_div_begin(Div* node){
-			text += "{\\frac{(";
+			text += "{\\frac";
 		}
         	virtual void visit_div_middle(Div* node){
-			text += ")}{(";
+			text += "";
 		}
         	virtual void visit_div_end(Div* node){
-			text += ")}";
+			text += "}";
 		}
         	virtual void visit_pow_begin(Pow* node){
 			text += "{(";
