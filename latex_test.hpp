@@ -43,6 +43,9 @@ TEST(VisitLatextest, multipleComposites)
 
 	//for (auto i : num) delete i;
 	//delete latex, a, b, test;
+
+for (auto i : num) delete i;
+        delete a, b, latex;
 }
 
 
@@ -55,6 +58,10 @@ TEST(VisitLatexTest, multiplication){
 	std::string expect = "${({2}\\cdot{5})}$";
 	EXPECT_EQ(latex->PrintLaTeX(b), expect);
 
+
+
+for (auto i : num) delete i;
+        delete b, latex;
 }
 
 TEST(VisitLatexTest, div){
@@ -66,5 +73,7 @@ TEST(VisitLatexTest, div){
         std::string expect = "${\\frac{2}{3}}$";
         EXPECT_EQ(latex->PrintLaTeX(b), expect);
 
+for (auto i : num) delete i;
+        delete  b, latex;
 }
 #endif
